@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),nanopi2)
+ifeq ($(TARGET_BOARD_PLATFORM),slsiap)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := bcm43438a0
