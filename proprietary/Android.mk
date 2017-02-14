@@ -63,4 +63,49 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := broadcom
 include $(BUILD_PREBUILT)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := bcm43430a1
+LOCAL_SRC_FILES := bcm43438a1.hcd
+LOCAL_MODULE_SUFFIX := .hcd
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := broadcom
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := nvram_ap6212a
+LOCAL_SRC_FILES := nvram_ap6212a.txt
+LOCAL_MODULE_SUFFIX := .txt
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := broadcom
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := fw_bcm43438a1
+LOCAL_SRC_FILES := fw_bcm43438a1.bin
+LOCAL_MODULE_SUFFIX := .bin
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := broadcom
+LOCAL_POST_INSTALL_CMD := \
+	ln -sf fw_bcm43438a1.bin $(TARGET_OUT_VENDOR)/firmware/fw_bcm43438a1_apsta.bin; \
+	ln -sf fw_bcm43438a1.bin $(TARGET_OUT_VENDOR)/firmware/fw_bcm43438a1_p2p.bin
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := config_ap6212
+LOCAL_SRC_FILES := config_ap6212.txt
+LOCAL_MODULE_SUFFIX := .txt
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/firmware
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_OWNER := broadcom
+LOCAL_POST_INSTALL_CMD := \
+	ln -sf config_ap6212.txt $(TARGET_OUT_VENDOR)/firmware/config.txt
+include $(BUILD_PREBUILT)
+
 endif
