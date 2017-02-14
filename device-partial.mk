@@ -15,6 +15,10 @@
 # Broadcom blob(s) necessary for nanopi2 hardware
 PRODUCT_PACKAGES := \
 	bcm43438a0 \
+	bcm43430a1 \
 	nvram_ap6212 \
+	nvram_ap6212a \
 	fw_bcm43438a0 \
-	fw_bcm43438a0_apsta
+	fw_bcm43438a0_apsta \
+	fw_bcm43438a1 \
+	config_ap6212
